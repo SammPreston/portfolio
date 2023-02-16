@@ -1,107 +1,160 @@
-/* --  * containers need dimentions changed to be responsive: text (vw or rem), image and div (%) */
+/* --  ! containers need dimentions changed to be responsive: text (vw or rem), image and div (%) */
+/* --Media Query break point that sets the navigation bar set to the top of screen. Photo on left side and buttons on right*/
+/* ..retScrn is 100% vw to view content inside*/
+
+
+/* -- Google fonts*/
+/* font-family: 'Amatic SC', cursive; */
+/* font-family: 'Chakra Petch', sans-serif;*/
+/* font-family: 'Nunito', sans-serif; */
+/* font-family: 'Orbitron', sans-serif; */
+/* font-family: 'Space Grotesk', sans-serif; */
+/* -- Google fonts*/
+
+*{
+    margin: 0;
+    padding:0;
+}
 body{
     background-color: #000033;
 }
 #largeCard{
     margin: 50px;
-    padding: 40px 30px;
-    height: 950px;
-    display:flex;
-    flex-direction: row;
+    padding: 2vh;
     box-shadow: 0 0 20px rgb(0, 0, 0);
-    background-color:#000033;
+    background-image: url(/public/img/Untitledbackground.png);
     border-radius: 10px;
-    contain: content;
-}
-#titleCard{
-    width: 100%;
-    text-align: center;
-}
-#titleCard>h1{
-    color: #cc7a00;
-    margin-top: 50px;
-    font-size: 60px;
-    /* font-family: 'Amatic SC', cursive; */
-    font-family: 'Chakra Petch', sans-serif;
-    /* font-family: 'Nunito', sans-serif; */
-    /* font-family: 'Orbitron', sans-serif; */
-    /* font-family: 'Space Grotesk', sans-serif; */
-}
-#titleCard>h3{
-    margin: 10px;
-    font-size: 40px;
-    color:white;
-}
-#contentCard {
-    display:flex;
-    flex-direction:row;
-    
-}
-nav{
-    margin-right: 50px;
+
     display:flex;
     flex-direction: column;
-    justify-content:flex-end;
-    /* border: 1px solid wheat; */
-}
-img{
-    margin-top: 50px;
-    padding: 25px;
-    width: 22vw;
-    border: 1px solid white;
-    border-radius: 50%;
-    position: relative;
-    bottom: 40px;
-   
 
 }
-#pageSelection{
-    margin-top: 15px;
-    display:flex;
+
+
+/*Upper row*/
+#proCard{
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    /* border: 1px solid wheat; */
+    
+}
+#pImg{
+    width: 80%;
+    align-self: center;
+
+    /* border: 1px solid white; */
+}
+img{
+    width: 75%;
+    padding: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    align-self: center;
+    box-shadow: 0 0 10px 10px rgb(27, 27, 89);
+}
+
+#titleCard{
+    width:110%;
+    text-align: center;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    
+    position: relative;
+    right: 3vw;
+
+    /* border: 1px solid white; */
+}
+#titleCard>h1{
+  
+    color: #cc7a00;
+    font-size: 10vh;
+    font-family: 'Chakra Petch', sans-serif;
+   
+}
+#titleCard>h3{
+    /* border: 1px solid wheat; */
+    font-size: 5vh;
+    font-family: 'Rajdhani', sans-serif;
+    color:wheat;
+    
+}
+/*Lower Row*/
+#contentCard{
+    padding: 2vh;
+    background-color:#000033;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    /* border: 1px solid white; */
+}
+
+nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     /* border: 1px solid wheat; */
 }
 .navButt{
-    margin: 25px 0px;
-    padding: 15px 20px;
+    margin: 2vh;
+    padding: 10px 20px;
     font-size: 30px;
-    background-color:rgb(4, 4, 78);
+    background-color:#000033;
     color: white;
-    border: 1px solid rgb(4, 4, 49);
-    box-shadow: 0 0 20px rgb(4, 6, 33);
-    border-radius: 10px;
+    border: 6px solid #000033;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    /* border-radius: 10px; */
 }
-.navButt:hover{
-    background-color:rgb(3, 3, 62);
+/*JS Styles applied onclick*/
+.change{
+    background-color:#000033;
+    border: 6px inset rgb(49, 49, 99);
+    box-shadow: none;
 }
 
 /*dynamic screen*/
 #retroScreen{
     /* -- size should be static regardless of the page loaded */
-    margin: 80px 50px 0px 50px;
-    height: 65%;
+    padding: 5vh;
+    width: 80vw;
+    height: 65vh;
     background-color:#37689D;
-    align-self: center;
     border: 15px inset rgb(9, 9, 82);
+    
+    align-self: center;
     display:flex;
     flex-direction:column;
-    align-items: center;
-    position: relative;
-    bottom: 30px;
+ 
 }
-#bioContainer{
+
+.subTit{
+    padding: 5px 0 0 20px;
+    width: 86%;
+    color: wheat;
+    background-color:#000033;
+    text-align: left;
+    align-self:center;
+}
+
+
+.conCan{
     padding: 20px;
-    width: 90%;
+    width: 80%;
+    height: 100%;
     background-color: #5a8cc3;
-    
+    align-self: center;
    
 }
+
 #bio{
    
 }
-.change{
-    background-color:rgb(3, 3, 62);
-    box-shadow: 0px 0px 20px  #6600cc; 
-}
+
+
+
+
 
 
