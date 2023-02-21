@@ -134,9 +134,10 @@ nav{
 
 .subTit{
     padding: 5px 0 0 20px;
-    width: 86%;
+    width: 82%;
     color: wheat;
-    background-color:#000033;
+    background-image: linear-gradient(to right, #523ea3, #5d4ba4, #A6C8ED);
+    border: 3px solid #e2d9ce;
     text-align: left;
     align-self:center;
 }
@@ -146,7 +147,8 @@ nav{
     padding: 20px;
     width: 80%;
     height: 100%;
-    background-color: #5a8cc3;
+    background-color: #c2bdb7;
+    border: 3px solid #e2d9ce;
     align-self: center;
    
 }
