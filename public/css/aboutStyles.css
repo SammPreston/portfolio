@@ -40,12 +40,12 @@ body{
     /* border: 1px solid wheat; */
     
 }
-#pImg{
+#pImgCont{
     align-self: center;
 
     /* border: 1px solid white; */
 }
-img{
+#pImgCont>img{
     width: 40vh;
     padding: 25px;
     border: 1px solid white;
@@ -134,27 +134,48 @@ nav{
 
 .subTit{
     padding: 5px 0 0 20px;
-    width: 82%;
+    width: 100%;
     color: wheat;
     background-image: linear-gradient(to right, #523ea3, #5d4ba4, #A6C8ED);
-    border: 3px solid #e2d9ce;
+    /* border: 3px solid #e2d9ce; */
     text-align: left;
     align-self:center;
 }
 
 
 .conCan{
-    padding: 20px;
+    /* padding: 20px; */
     width: 80%;
     height: 100%;
     background-color: #c2bdb7;
     border: 3px solid #e2d9ce;
     align-self: center;
-   
+   contain: content;
 }
-
-#bio{
-   
+/*About Me*/
+#innerCont{
+    height: 800px;
+    border: 1px solid black;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.conCan-ButtonSelectContainer{
+    padding: 3px;
+}
+.conCan-ButtonSelectContainer>button{
+    width: 100%;
+}
+.conTxt{
+    padding: 2vh;
+    width: 70%;
+    font-size: 2.3vh;
+    background-color: white;
+    border-left: 1px solid rgb(136, 255, 253);
+}
+.resIcon{
+    height: 5vh;
+    
 }
 
 
