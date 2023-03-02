@@ -1,0 +1,188 @@
+/* Base dimentions are 320*514 */
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: #000033;
+}
+
+#largeCard{
+    margin: 2vh;
+    padding: 1vh;
+    
+    height: 94.5vh;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    background-image: url(/public/img/background1.png);
+    border-radius: 10px;
+
+    display:flex;
+    flex-direction: column;
+
+}
+#titleCard{
+    height: auto;
+    width: 100%;
+
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #000033af;
+    
+
+    /* border: 1px solid white; */
+}
+#imgCont{
+    width: 16vh;
+    align-self: center;
+    /* border: 1px double white; */
+}
+#imgCont>img{
+    margin: 1vh;
+    padding: 1vh;
+    max-width: 100%;
+    max-height:  100%;
+
+    border: 1px solid white;
+    border-radius: 50%;
+    /* box-shadow: 0 0 10px 5px rgb(27, 27, 89); */
+
+   align-self: center;
+}
+#title{
+    margin-left: 3vh;
+    padding-top: 1.5vh;
+    width: 70%;
+    /* border: 1px solid white; */
+
+}
+#title>h1{
+    
+    color: #cc7a00;
+    font-size: 4vh;
+    font-family: 'Chakra Petch', sans-serif;
+   
+}
+#title>h3{
+    margin-top: 3vh;
+    padding: 0 5vh;
+    font-size: 3vh;
+    font-family: 'Rajdhani', sans-serif;
+    color:wheat;
+    /* border: 1px solid wheat; */
+}
+
+/*Lower Row*/
+#contentCard{
+    padding: 2vh;
+    height: 70%;
+    width: 90%;
+    background-color:#000033d3;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    /* border: 1px solid white; */
+}
+#pageSelection{
+    width: 100%;
+}
+nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* border: 1px solid wheat; */
+}
+.navButt{
+    margin: 2vh 0.5vh; 
+    /* padding: 1vh 3vh; */
+    font-size: 2vh;
+    background-color:#00003386;
+    color: wheat;
+    border: 6px outset #020256;
+    border-radius: 10px;
+}
+/*JS Styles applied onclick*/
+.change{
+    color: rgb(97, 140, 157);
+    background-color:#000033;
+    border: 6px inset #020256;
+    box-shadow: none;
+}
+
+/*dynamic screen*/
+#retroScreen{
+    /* -- size should be static regardless of the page loaded */
+    /* padding: 5vh; */
+    width: 90%;
+    height: 300px;
+    background-color:#37689D;
+    border: 15px inset rgb(9, 9, 82);
+    
+    align-self: center;
+    display:flex;
+    justify-content: center;
+    overflow: scroll;
+}
+.conCan{
+    /* padding: 20px; */
+    width: 90%;
+    height: 240px;
+    background-color: #c2bdb7;
+    border: 3px solid #e2d9ce;
+    align-self: center;
+   contain: content;
+}
+.subTit{
+    padding: .5vh 0 0 .4vh;
+    width: 100%;
+    color: wheat;
+    background-image: linear-gradient(to right, #523ea3, #5d4ba4, #A6C8ED);
+    /* border: 3px solid #e2d9ce; */
+    text-align: left;
+    
+    font-size: 3vh;
+}
+
+
+/*About Me*/
+.fileViewer{
+    height: 100%;
+    /* border: 1px solid black; */
+    display:grid;
+    grid-template-columns: 25% 75%;
+   
+}
+.fileNavigation{
+    height: 100%;
+    padding: 3px 0;
+    /* border: 1px solid black; */
+}
+.fileNavigation>button{
+    width: 100%;
+    font-size: 2vh;
+    border:none;
+}
+.conTxt{
+    /* padding: 2vh; */
+    width: 100%;
+    font-size: 2.5vh;
+    background-color: white;
+    border-left: 2px solid #e2d9ce;
+
+    overflow-x: scroll;
+}
+.conTxt>h6{
+    padding: .5vh;
+    background-color:#000033;
+    color: white;
+}
+.txt{
+    padding: .5vh;
+    
+}
+.resIcon{
+    height: 5vh;
+    
+}
