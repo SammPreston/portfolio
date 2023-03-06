@@ -123,7 +123,7 @@ nav{
     align-self: center;
     display:flex;
     justify-content: center;
-    overflow: scroll;
+    
 }
 .conCan{
     /* padding: 20px; */
@@ -132,7 +132,6 @@ nav{
     background-color: #c2bdb7;
     border: 3px solid #e2d9ce;
     align-self: center;
-   contain: content;
 }
 .subTit{
     padding: .5vh 0 0 .4vh;
@@ -152,6 +151,7 @@ nav{
     /* border: 1px solid black; */
     display:grid;
     grid-template-columns: 25% 75%;
+    
    
 }
 .fileNavigation{
@@ -164,14 +164,18 @@ nav{
     font-size: 2vh;
     border:none;
 }
+.change1{
+    background-color: gray;
+}
 .conTxt{
     /* padding: 2vh; */
     width: 100%;
+    height: 92%;
     font-size: 2.5vh;
     background-color: white;
     border-left: 2px solid #e2d9ce;
 
-    overflow-x: scroll;
+    overflow-y: scroll;
 }
 .conTxt>h6{
     padding: .5vh;

@@ -26,56 +26,108 @@ Array.from(buttons).forEach(function(button) {
             conCan.appendChild(title);
 
            
-                // -- inner about me container
-                const fileViewer = document.createElement('div');
-                    fileViewer.className='fileViewer';   
-                conCan.appendChild(fileViewer);
+            // -- inner about me container
+            const fileViewer = document.createElement('div');
+                fileViewer.className='fileViewer';   
+            conCan.appendChild(fileViewer);
 
-                // -- button navigation
-                const fileNavigation = document.createElement('div');
-                    fileNavigation.className='fileNavigation';
-                fileViewer.appendChild(fileNavigation)
-                // -- button creation
-                const overView = document.createElement('button');
-                    overView.innerHTML="Overview";
-                fileNavigation.appendChild(overView);
-                if
-                // -- Inner content text
-                // .. Need function simular to the navButts where screen clears onclick
-                const conTxt = document.createElement('div');
-                    conTxt.innerHTML=`
-                    <h6>Hello World!</h6>
-                    <div class="txt"> 
-                        <P>
-                            The theme for this website is space retro. Taking design concepts from my childhood my interactive screen is inpired by Windows 2000. 
-                        </p>
-                    </div>
-                    `
-                    conTxt.className='conTxt';
-                fileViewer.appendChild(conTxt);
+            // -- button navigation
+            const fileNavigation = document.createElement('div');
+                fileNavigation.className='fileNavigation';
+            fileViewer.appendChild(fileNavigation)
+            // -- button creation
+            const overView = document.createElement('button');
+                overView.className='button-selector';
+                overView.innerHTML="Overview";
+            fileNavigation.appendChild(overView);
+
+            const hobbies = document.createElement('button');
+                hobbies.className='button-selector';
+                hobbies.innerHTML="Hobbies";
+            fileNavigation.appendChild(hobbies);
+            // -- Inner content container used as 'dynamic' screen in fileViewer
+            const conTxt = document.createElement('div');
+                conTxt.className='conTxt';
+            fileViewer.appendChild(conTxt);
+
+            // -- Dynamic button function to display in conTxt container
+            // .. select buttons by className
+            const selector = document.getElementsByClassName('button-selector');
+                
+
+            
+            // .. Button selector function
+            Array.from(selector).forEach(function(selector) {
+                selector.addEventListener('click', (event)=>{
+                    console.log("selector function test");
+                    if(document.querySelectorAll('.change1').length!==0){// -- Dynamic Button
+                        document.querySelectorAll('.change1')[0].className='selector';
+                    }
+                    // -- button color change onclick
+                    event.target.className+=' change1';
+                    conTxt.innerHTML='';
+
+                    if(selector.innerHTML === 'Overview'){
+                        console.log('overview button functions')
+                            // -- Inner content text
+                        conTxt.innerHTML=`
+                            <h6>Hello World!</h6>
+                            <div class="txt"> 
+                                <p>
+                                    The theme for this website is space retro. Taking design concepts from my childhood my interactive screen is inpired by Windows 2000. 
+                                </p>
+                                <br><br>
+                                <p>   
+                                    Lorem ipsum dolor sit amet. Non magnam nisi ab temporibus amet ad blanditiis eius. In nihil molestiae et cupiditate voluptatem a quibusdam neque eum dicta dicta sed voluptatem voluptate et magni delectus At velit delectus.
+                                    
+                                </p>
+                                <br><br>
+                                <p>
+                                    Non cumque harum ut quibusdam facere id minima nobis est aliquid adipisci et veniam aliquam aut fugiat autem non dolores assumenda? Sed provident laboriosam id deserunt reiciendis non dolor magnam. Non sint error est voluptatem praesentium id soluta animi et dolorum ipsam ab nesciunt consequatur sed autem modi eum officia veniam. Qui nemo iusto et modi soluta qui fuga deleniti et consequatur voluptatibus ut ullam similique ab molestias consectetur est deserunt consectetur!
+                                </p>
+                            </div>
+                        `
+                    }else if(selector.innerHTML === 'Hobbies'){
+                        conTxt.innerHTML=`
+                        <h6>Hobbies</h6>
+                        <div class="txt">
+                            <p>
+                                some hobbies
+                            </p>
+                        </div>
+                        `
+                    }
+                })
+            })
+               
+                    
                     
 
         
         }else if(button.innerHTML === 'Projects'){// -- Projects Page
             console.log("resumePage");// -- page test
-
+            // -- content container
             const conCan1 = document.createElement('div');
                 conCan1.className="conCan";
             retScrn.appendChild(conCan1);
-
+            // -- Title
             const title1 =  document.createElement('h1');
                 title1.className="subTit";
                 title1.innerHTML="Projects";
             conCan1.appendChild(title1);
-
+            // -- Inner content container
+            const fileViewer1 = document.createElement('div')
+                fileViewer1.className='fileViewer';
+            conCan1.appendChild(fileViewer1);
+            // -- Left Button Navigation
             const fileNavigation1 = document.createElement('div');
                 fileNavigation1.className='fileNavigation';
-            conCan1.appendChild(fileNavigation1);
-            
+            fileViewer1.appendChild(fileNavigation1);
+            // -- Navigation button creation
             const overView1 = document.createElement('button');
                     overView1.innerHTML="Overview";
             fileNavigation1.appendChild(overView1);
-
+            // -- inner content to nest in if statement
             const conTxt1 = document.createElement('div');
                 conTxt1.className='conTxt';
                 conTxt1.innerHTML=`
@@ -84,7 +136,7 @@ Array.from(buttons).forEach(function(button) {
                 <p>This is a p tag</p>
                 </div>
                 `
-            conCan1.appendChild(conTxt1);
+            fileViewer1.appendChild(conTxt1);
         
         }else if(button.innerHTML === 'Resume'){// -- Resume Page
             console.log("resume");// -- page test
